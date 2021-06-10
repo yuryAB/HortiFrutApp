@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D00BA0B2265AF854008739BA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00BA0B1265AF854008739BA /* CameraViewController.swift */; };
 		D01ECF92265A9F34005FCC1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01ECF91265A9F34005FCC1A /* AppDelegate.swift */; };
 		D01ECF94265A9F34005FCC1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01ECF93265A9F34005FCC1A /* SceneDelegate.swift */; };
 		D01ECF96265A9F34005FCC1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01ECF95265A9F34005FCC1A /* ViewController.swift */; };
 		D01ECF99265A9F34005FCC1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01ECF97265A9F34005FCC1A /* Main.storyboard */; };
 		D01ECF9B265A9F35005FCC1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01ECF9A265A9F35005FCC1A /* Assets.xcassets */; };
 		D01ECF9E265A9F35005FCC1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01ECF9C265A9F35005FCC1A /* LaunchScreen.storyboard */; };
+		D06F6719266430320058A803 /* HortiUnitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06F6718266430320058A803 /* HortiUnitsView.swift */; };
+		D06F671B266434570058A803 /* HortiUnitsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06F671A266434570058A803 /* HortiUnitsCell.swift */; };
+		D06F671D266439690058A803 /* HortiUnitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06F671C266439690058A803 /* HortiUnitsViewController.swift */; };
+		D09C38F52672AC2E000EDB13 /* ClassificationUnits.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D09C38F42672AC2E000EDB13 /* ClassificationUnits.mlmodel */; };
+		D09C7E47266C2559002F5444 /* UnitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09C7E46266C2559002F5444 /* UnitManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D00BA0B1265AF854008739BA /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		D01ECF8E265A9F34005FCC1A /* hortifruti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hortifruti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D01ECF91265A9F34005FCC1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D01ECF93265A9F34005FCC1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,11 @@
 		D01ECF9A265A9F35005FCC1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D01ECF9D265A9F35005FCC1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D01ECF9F265A9F35005FCC1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D06F6718266430320058A803 /* HortiUnitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HortiUnitsView.swift; sourceTree = "<group>"; };
+		D06F671A266434570058A803 /* HortiUnitsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HortiUnitsCell.swift; sourceTree = "<group>"; };
+		D06F671C266439690058A803 /* HortiUnitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HortiUnitsViewController.swift; sourceTree = "<group>"; };
+		D09C38F42672AC2E000EDB13 /* ClassificationUnits.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ClassificationUnits.mlmodel; sourceTree = "<group>"; };
+		D09C7E46266C2559002F5444 /* UnitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D00BA0AE265AF7B2008739BA /* ModelEye */ = {
+			isa = PBXGroup;
+			children = (
+				D00BA0B1265AF854008739BA /* CameraViewController.swift */,
+			);
+			path = ModelEye;
+			sourceTree = "<group>";
+		};
 		D01ECF85265A9F34005FCC1A = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +76,45 @@
 		D01ECF90265A9F34005FCC1A /* hortifruti */ = {
 			isa = PBXGroup;
 			children = (
+				D09C38F42672AC2E000EDB13 /* ClassificationUnits.mlmodel */,
+				D09C7E45266C253E002F5444 /* Model */,
+				D06F671726642ED60058A803 /* HortiTableView */,
+				D00BA0AE265AF7B2008739BA /* ModelEye */,
+				D01ECFA5265AA89F005FCC1A /* HortiMainMenu */,
 				D01ECF91265A9F34005FCC1A /* AppDelegate.swift */,
 				D01ECF93265A9F34005FCC1A /* SceneDelegate.swift */,
-				D01ECF95265A9F34005FCC1A /* ViewController.swift */,
 				D01ECF97265A9F34005FCC1A /* Main.storyboard */,
 				D01ECF9A265A9F35005FCC1A /* Assets.xcassets */,
 				D01ECF9C265A9F35005FCC1A /* LaunchScreen.storyboard */,
 				D01ECF9F265A9F35005FCC1A /* Info.plist */,
 			);
 			path = hortifruti;
+			sourceTree = "<group>";
+		};
+		D01ECFA5265AA89F005FCC1A /* HortiMainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				D01ECF95265A9F34005FCC1A /* ViewController.swift */,
+			);
+			path = HortiMainMenu;
+			sourceTree = "<group>";
+		};
+		D06F671726642ED60058A803 /* HortiTableView */ = {
+			isa = PBXGroup;
+			children = (
+				D06F6718266430320058A803 /* HortiUnitsView.swift */,
+				D06F671A266434570058A803 /* HortiUnitsCell.swift */,
+				D06F671C266439690058A803 /* HortiUnitsViewController.swift */,
+			);
+			path = HortiTableView;
+			sourceTree = "<group>";
+		};
+		D09C7E45266C253E002F5444 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D09C7E46266C2559002F5444 /* UnitManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +188,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D01ECF96265A9F34005FCC1A /* ViewController.swift in Sources */,
+				D00BA0B2265AF854008739BA /* CameraViewController.swift in Sources */,
 				D01ECF92265A9F34005FCC1A /* AppDelegate.swift in Sources */,
+				D09C38F52672AC2E000EDB13 /* ClassificationUnits.mlmodel in Sources */,
+				D06F6719266430320058A803 /* HortiUnitsView.swift in Sources */,
+				D06F671D266439690058A803 /* HortiUnitsViewController.swift in Sources */,
+				D06F671B266434570058A803 /* HortiUnitsCell.swift in Sources */,
+				D09C7E47266C2559002F5444 /* UnitManager.swift in Sources */,
 				D01ECF94265A9F34005FCC1A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ASRK7R7UY8;
 				INFOPLIST_FILE = hortifruti/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +353,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = UNI.hortifruti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,6 +365,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ASRK7R7UY8;
 				INFOPLIST_FILE = hortifruti/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +373,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = UNI.hortifruti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

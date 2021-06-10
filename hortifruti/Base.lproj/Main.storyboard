@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dKU-6K-9Ex">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,161 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hortifruti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainMenuBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Jhu-E1-B7M">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="896" id="1lk-6V-kAR"/>
+                                    <constraint firstAttribute="width" constant="414" id="6as-dp-jHK"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hortiIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Rnz-bw-kvK">
+                                <rect key="frame" x="140" y="215" width="135" height="93"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" text="Hortifruti" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AR9-Mg-k9c">
+                                <rect key="frame" x="20" y="349" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <color key="textColor" name="labelGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="DCC-em-b9J">
+                                <rect key="frame" x="104" y="425" width="64" height="304"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1a-8G-jF3">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                        <state key="normal" image="market Icon"/>
+                                        <connections>
+                                            <action selector="geralButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QTs-wk-i2b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYg-l5-ibD">
+                                        <rect key="frame" x="0.0" y="80" width="64" height="64"/>
+                                        <state key="normal" image="greensIcon"/>
+                                        <connections>
+                                            <action selector="verdurasButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y6P-yl-mcX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNP-Jd-Yc7">
+                                        <rect key="frame" x="0.0" y="160" width="64" height="64"/>
+                                        <state key="normal" image="redsIcon"/>
+                                        <connections>
+                                            <action selector="legumesButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UWc-RO-u5z"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7LS-Dt-nms">
+                                        <rect key="frame" x="0.0" y="240" width="64" height="64"/>
+                                        <state key="normal" image="fruitsIcon"/>
+                                        <connections>
+                                            <action selector="frutasButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YdY-Fu-Itr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="hG5-pa-4Fc">
+                                <rect key="frame" x="198" y="438" width="77" height="278"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geral" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PpF-KI-AuT">
+                                        <rect key="frame" x="0.0" y="0.0" width="77" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <color key="textColor" name="labelGreen"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verduras" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wM4-VL-wyt">
+                                        <rect key="frame" x="0.0" y="85.5" width="77" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <color key="textColor" name="labelGreen"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Legumes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHu-2a-L7N">
+                                        <rect key="frame" x="0.0" y="171" width="77" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <color key="textColor" name="labelGreen"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frutas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZl-Fk-8ex">
+                                        <rect key="frame" x="0.0" y="256.5" width="77" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <color key="textColor" name="labelGreen"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="hortiGreen"/>
+                        <constraints>
+                            <constraint firstItem="AR9-Mg-k9c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0A5-gU-HeE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hG5-pa-4Fc" secondAttribute="bottom" constant="146" id="1M3-oo-WHh"/>
+                            <constraint firstItem="AR9-Mg-k9c" firstAttribute="top" secondItem="Rnz-bw-kvK" secondAttribute="bottom" constant="41" id="2zh-0f-oCU"/>
+                            <constraint firstAttribute="bottom" secondItem="Jhu-E1-B7M" secondAttribute="bottom" id="Goi-Aa-tf0"/>
+                            <constraint firstItem="Jhu-E1-B7M" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QPn-3Q-kdJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rnz-bw-kvK" secondAttribute="trailing" constant="139" id="RFy-ID-8aa"/>
+                            <constraint firstItem="hG5-pa-4Fc" firstAttribute="top" secondItem="AR9-Mg-k9c" secondAttribute="bottom" constant="59" id="RXA-oj-b5Z"/>
+                            <constraint firstItem="AR9-Mg-k9c" firstAttribute="top" secondItem="Rnz-bw-kvK" secondAttribute="bottom" constant="41" id="Rfa-o7-Hgx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DCC-em-b9J" secondAttribute="bottom" constant="133" id="Yse-eb-SzW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AR9-Mg-k9c" secondAttribute="trailing" constant="20" id="bVI-eY-NlX"/>
+                            <constraint firstItem="Jhu-E1-B7M" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bwJ-VX-j4d"/>
+                            <constraint firstItem="DCC-em-b9J" firstAttribute="top" secondItem="AR9-Mg-k9c" secondAttribute="bottom" constant="46" id="cAk-OD-Ii9"/>
+                            <constraint firstItem="DCC-em-b9J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="104" id="faO-QS-pBj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hG5-pa-4Fc" secondAttribute="trailing" constant="139" id="fn1-9K-BaG"/>
+                            <constraint firstItem="DCC-em-b9J" firstAttribute="top" secondItem="AR9-Mg-k9c" secondAttribute="bottom" constant="46" id="gxR-ue-5K2"/>
+                            <constraint firstItem="Jhu-E1-B7M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ncH-O9-ISa"/>
+                            <constraint firstItem="Rnz-bw-kvK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="uYA-Zy-XHh"/>
+                            <constraint firstItem="hG5-pa-4Fc" firstAttribute="leading" secondItem="DCC-em-b9J" secondAttribute="trailing" constant="30" id="wUH-Qn-iIu"/>
+                            <constraint firstItem="Rnz-bw-kvK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="127" id="xH3-JG-T2O"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="qIL-FW-fUz"/>
+                    <connections>
+                        <outlet property="frutasButton" destination="7LS-Dt-nms" id="98J-TH-SbQ"/>
+                        <outlet property="geralButton" destination="w1a-8G-jF3" id="GUj-NC-SHN"/>
+                        <outlet property="legumesButton" destination="uNP-Jd-Yc7" id="Qdd-Za-p5m"/>
+                        <outlet property="verdurasButton" destination="UYg-l5-ibD" id="Ejz-Xo-rrc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1644.9275362318842" y="157.36607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yh8-Tz-KoO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dKU-6K-9Ex" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O1e-fO-pca">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="J2R-Ae-wfD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sJy-JI-IY8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="734.78260869565224" y="157.36607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fruitsIcon" width="64" height="64"/>
+        <image name="greensIcon" width="64" height="64"/>
+        <image name="hortiIcon" width="137" height="137"/>
+        <image name="mainMenuBackground" width="379" height="818"/>
+        <image name="market Icon" width="64" height="64"/>
+        <image name="redsIcon" width="64" height="64"/>
+        <namedColor name="hortiGreen">
+            <color red="0.54900002479553223" green="0.82599997520446777" blue="0.59200000762939453" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="labelGreen">
+            <color red="0.25900000333786011" green="0.42899999022483826" blue="0.28600001335144043" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
 </document>
