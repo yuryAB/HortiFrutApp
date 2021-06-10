@@ -123,7 +123,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         
         identifierViewButton.backgroundColor = UIColor(named: "hortiYellow")
         identifierViewButton.setTitle("Ok", for: .normal)
-        identifierViewButton.tintColor = .black
+        identifierViewButton.setTitleColor(UIColor(named: "hortiIdenButtonLabelColor"), for: .normal)
         identifierViewButton.layer.cornerRadius = 20
         identifierViewButton.clipsToBounds = true
         
