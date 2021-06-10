@@ -29,6 +29,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         style()
         setupAutoLayout()
         informationIdentifierView.alpha = 0
+        navigationControllerSets()
     }
     
     func setupCaptureSession() {
@@ -108,6 +109,12 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     func showResult(){
         self.informationIdentifierApears()
+    }
+    
+    func navigationControllerSets() {
+        navigationController?.navigationBar.tintColor = UIColor(named: "unitsBodyBackground")
+        navigationController?.navigationBar.barTintColor = UIColor.clear
+        navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     func style() {
